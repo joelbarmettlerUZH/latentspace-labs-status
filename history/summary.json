@@ -166,19 +166,19 @@
     "url": "https://unbubble.ch/api/ready",
     "icon": "https://icons.duckduckgo.com/ip3/unbubble.ch.ico",
     "slug": "unbubble-api",
-    "status": "down",
-    "uptime": "41.10%",
-    "uptimeDay": "41.10%",
-    "uptimeWeek": "41.10%",
-    "uptimeMonth": "41.10%",
-    "uptimeYear": "41.10%",
-    "time": 444,
-    "timeDay": 444,
-    "timeWeek": 444,
-    "timeMonth": 444,
-    "timeYear": 444,
+    "status": "up",
+    "uptime": "4.13%",
+    "uptimeDay": "4.13%",
+    "uptimeWeek": "4.13%",
+    "uptimeMonth": "4.13%",
+    "uptimeYear": "4.13%",
+    "time": 458,
+    "timeDay": 458,
+    "timeWeek": 458,
+    "timeMonth": 458,
+    "timeYear": 458,
     "dailyMinutesDown": {
-      "2026-10-25": 0
+      "2026-10-25": 8
     }
   }
 ]
