@@ -1,9 +1,9 @@
 owner: joelbarmettlerUZH
 repo: latentspace-labs-status
 
-# Hourly checks. GitHub cron can lag by a few minutes under load.
+# Hourly checks, off the :00 minute: GitHub drops or delays top-of-the-hour crons.
 workflowSchedule:
-  uptime: "0 * * * *"
+  uptime: "7 * * * *"
 
 # Repository secrets Upptime may read. This is the complete allowlist.
 secrets:
@@ -43,6 +43,10 @@ sites:
     slug: souverana-api
     # Needs GET /api/health on lead-api; reports down until that is deployed.
     url: https://souverana.ch/api/health
+  - name: Souverana Analytics
+    slug: souverana-analytics
+    # Self-hosted Umami; the same heartbeat its Docker healthcheck uses.
+    url: https://stats.souverana.ch/api/heartbeat
 
   # --- Plain websites ---
   - name: Latentspace Labs Website
@@ -67,6 +71,10 @@ sites:
     url: https://unbubble.ch/api/ready
     headers:
       - "Authorization: Basic $UNBUBBLE_BASIC_AUTH"
+  - name: Unbubble Analytics
+    slug: unbubble-analytics
+    # Self-hosted Umami. Its collector is public, so no auth header is needed.
+    url: https://analytics.unbubble.ch/api/heartbeat
 
 status-website:
   cname: status.latentspace-labs.ch
