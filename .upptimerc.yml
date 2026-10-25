@@ -1,31 +1,81 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: joelbarmettlerUZH
+repo: latentspace-labs-status
+
+# Hourly checks. GitHub cron can lag by a few minutes under load.
+workflowSchedule:
+  uptime: "0 * * * *"
+
+# Repository secrets Upptime may read. This is the complete allowlist.
+secrets:
+  - NOTIFICATION_TELEGRAM
+  - NOTIFICATION_TELEGRAM_BOT_KEY
+  - NOTIFICATION_TELEGRAM_CHAT_ID
+  - UNBUBBLE_BASIC_AUTH # base64 of "user:password" for the Caddy basic_auth
+
+# GitHub also notifies the assignee when an incident issue opens.
+assignees:
+  - joelbarmettlerUZH
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # --- Slidev MCP ---
+  - name: Slidev MCP Website
+    slug: slidev-mcp-web
+    url: https://slidev-mcp.org
+  - name: Slidev MCP Server
+    slug: slidev-mcp-server
+    # Checks Postgres and the slide builder; returns 503 when degraded.
+    url: https://mcp.slidev-mcp.org/health
+
+  # --- Vue MCP ---
+  - name: Vue MCP Website
+    slug: vue-mcp-web
+    url: https://vue-mcp.org
+  - name: Vue MCP Server
+    slug: vue-mcp-server
+    # Needs GET /health on the server; reports down until that is deployed.
+    url: https://mcp.vue-mcp.org/health
+
+  # --- Souverana ---
+  - name: Souverana Website
+    slug: souverana-web
+    url: https://souverana.ch
+  - name: Souverana API
+    slug: souverana-api
+    # Needs GET /api/health on lead-api; reports down until that is deployed.
+    url: https://souverana.ch/api/health
+
+  # --- Plain websites ---
+  - name: Latentspace Labs Website
+    slug: latentspace-labs-web
+    url: https://latentspace-labs.ch
+  - name: Joel Barmettler Website
+    slug: joelbarmettler-web
+    url: https://joelbarmettler.xyz
+
+  # --- Unbubble (private alpha behind Caddy basic auth) ---
+  - name: Unbubble Website
+    slug: unbubble-web
+    url: https://unbubble.ch
+    # 401 means Caddy is up and challenging; that is healthy for the frontend.
+    expectedStatusCodes:
+      - 200
+      - 401
+  - name: Unbubble API
+    slug: unbubble-api
+    # /ready is the readiness probe: database plus "can serve current data".
+    # It is stricter than /health, so stale data pages you too.
+    url: https://unbubble.ch/api/ready
+    headers:
+      - "Authorization: Basic $UNBUBBLE_BASIC_AUTH"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  cname: status.latentspace-labs.ch
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Latentspace Labs Status
+  introTitle: "**Latentspace Labs** service status"
+  introMessage: Live health of our websites and MCP servers, checked hourly.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
