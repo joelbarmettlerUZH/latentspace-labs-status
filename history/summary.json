@@ -108,6 +108,24 @@
     "dailyMinutesDown": {}
   },
   {
+    "name": "Souverana Analytics",
+    "url": "https://stats.souverana.ch/api/heartbeat",
+    "icon": "https://icons.duckduckgo.com/ip3/stats.souverana.ch.ico",
+    "slug": "souverana-analytics",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {}
+  },
+  {
     "name": "Latentspace Labs Website",
     "url": "https://latentspace-labs.ch",
     "icon": "https://icons.duckduckgo.com/ip3/latentspace-labs.ch.ico",
@@ -167,18 +185,34 @@
     "icon": "https://icons.duckduckgo.com/ip3/unbubble.ch.ico",
     "slug": "unbubble-api",
     "status": "up",
-    "uptime": "4.13%",
-    "uptimeDay": "4.13%",
-    "uptimeWeek": "4.13%",
-    "uptimeMonth": "4.13%",
-    "uptimeYear": "4.13%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 458,
     "timeDay": 458,
     "timeWeek": 458,
     "timeMonth": 458,
     "timeYear": 458,
-    "dailyMinutesDown": {
-      "2026-10-25": 8
-    }
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Unbubble Analytics",
+    "url": "https://analytics.unbubble.ch/api/heartbeat",
+    "icon": "https://icons.duckduckgo.com/ip3/analytics.unbubble.ch.ico",
+    "slug": "unbubble-analytics",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {}
   }
 ]
