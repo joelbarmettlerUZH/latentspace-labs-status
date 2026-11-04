@@ -94,19 +94,19 @@
     "url": "https://souverana.ch/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/souverana.ch.ico",
     "slug": "souverana-api",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.98%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 520,
-    "timeDay": 495,
-    "timeWeek": 542,
-    "timeMonth": 520,
-    "timeYear": 520,
+    "status": "up",
+    "uptime": "96.55%",
+    "uptimeDay": "65.39%",
+    "uptimeWeek": "95.06%",
+    "uptimeMonth": "96.55%",
+    "uptimeYear": "96.55%",
+    "time": 518,
+    "timeDay": 496,
+    "timeWeek": 537,
+    "timeMonth": 518,
+    "timeYear": 518,
     "dailyMinutesDown": {
-      "2026-11-04": 0
+      "2026-11-04": 498
     }
   },
   {
